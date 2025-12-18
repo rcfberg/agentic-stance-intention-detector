@@ -14,3 +14,11 @@ The three files are self-contained scripts/notebooks that can be executed sequen
 | 1 | `cola_stance_ollama.py`  | Stance detection – runs an agentic LLM (Gemma 3-4B) to assign a trinary stance (in-favor, against, irrelevant) to each tweet. |
 | 2 | `sisu_intent_ollama.py`  | Intention detection – extends the same agentic architecture to produce one of six intention categories (e.g., public-education, target-policymaker, etc.). |
 | 3 | `narrativeEmbeddings.ipynb` | Narrative embedding & community analysis – builds enriched tweet embeddings, runs cosine similarity + Louvain clustering to reveal narrative communities; includes visualisation and thematic annotation. |
+
+### 1. Install dependencies
+
+Python ≥3.9 recommended
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt        # includes: ollama, pandas, scikit-learn, bertopic, etc.
+
+ollama pull gemma3:4b
